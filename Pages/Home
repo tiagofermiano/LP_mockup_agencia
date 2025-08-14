@@ -1,0 +1,47 @@
+import React, { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { 
+  Zap, 
+  Target, 
+  Code, 
+  Palette, 
+  BarChart3, 
+  Smartphone,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Globe,
+  Users,
+  Award
+} from 'lucide-react';
+import { motion } from 'framer-motion';
+
+import HeroSection from '../components/landing/HeroSection';
+import ServicesSection from '../components/landing/ServicesSection';
+import PortfolioSection from '../components/landing/PortfolioSection';
+import TestimonialsSection from '../components/landing/TestimonialsSection';
+import AboutSection from '../components/landing/AboutSection';
+import ContactSection from '../components/landing/ContactSection';
+import StatsSection from '../components/landing/StatsSection';
+
+export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <HeroSection />
+      <StatsSection />
+      <ServicesSection />
+      <PortfolioSection />
+      <TestimonialsSection />
+      <AboutSection />
+      <ContactSection />
+    </div>
+  );
+}
